@@ -101,7 +101,12 @@ contract FRENCHAIN_iMigrator is Context, Ownable {
         return payable(versions[index]);
     }
 
-    function _newVersion(address _addressToMap) public virtual onlyOwner returns(bool) {
+    function _newVersion(address _addressToMap)
+        public
+        virtual
+        onlyOwner
+        returns (bool)
+    {
         version_index++;
         versions[version_index] = _addressToMap;
         return true;
